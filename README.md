@@ -34,6 +34,7 @@ packer build -var=headless=false win10_22h2.pkr.hcl
 # Build with a different image
 # Ensure to specify a new checksum!
 packer build -var=iso_checksum=sha256:xxx -var=iso_url=http://foo.com win10_22h2.pkr.hcl
+packer build -var "iso_checksum=none" -var "iso_url=/mnt/software/ISO/windows/Windows_11_23h2/Win11_23H2_English_x64v2.iso" win11_23h2.pkr.hcl
 # Use a different autounattend file
 packer build autounattend=./Autounattend.xml win10_22h2.pkr.hcl
 ```
@@ -44,7 +45,11 @@ packer build autounattend=./Autounattend.xml win10_22h2.pkr.hcl
 
 ### Windows 11
 
-`packer build win11_23h2.pkr.hcl`
+```bash
+packer build win11_23h2.pkr.hcl
+# specify local iso_url and dont checksum
+packer build -var "iso_checksum=none" -var "iso_url=/mnt/software/ISO/windows/Windows_11_23h2/Win11_23H2_English_x64v2.iso" win11_23h2.pkr.hcl
+```
 
 ### Windows Server 2019
 
