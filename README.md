@@ -44,7 +44,7 @@ packer build autounattend=./Autounattend.xml win10_22h2.pkr.hcl
 
 ### Windows 11
 
-`packer build win11_22h2.pkr.hcl`
+`packer build win11_23h2.pkr.hcl`
 
 ### Windows Server 2019
 

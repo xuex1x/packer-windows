@@ -105,8 +105,8 @@ build {
     restart_check_command = "powershell -command \"& {Write-Output 'restarted.'}\""
   }
 
-  provisioner "windows-update" {
-  }
+  #provisioner "windows-update" {
+  #}
 
   # Without this step, your images will be ~12-15GB
   # With this step, roughly ~8-9GB
